@@ -1,0 +1,175 @@
+Gathering Data...
+****Building the sample vector model...
+*************************
+Model Saved
+Test Sample: http://search.rin.ru/cgi-bin/find.cgi?text=%3Cscript%3Ealert(%27HZ+iz+1337%27)%3B%3C%2Fscript%3E
+
+Features: [ 1.07728019e-02 -2.15204740e+00 -6.45324707e-01  2.69714260e+00
+ -6.79129601e-01 -1.57900524e+00 -3.26841688e+00 -2.23396197e-01
+  2.40071967e-01 -2.33994633e-01  1.24054646e+00  2.08847404e+00
+  8.80397081e-01  5.49270511e-01 -4.61901575e-01  2.23739815e+00
+ -5.47368526e-01  3.28476691e+00  1.33288920e-01 -4.24479604e-01
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  8.10000000e+01  1.00000000e+00  1.50000000e+01  1.00000000e+00]
+
+Label:[1;31;1m XSS(1)/[1;32;1m NOT XSS(0)[0;0m: 1
+DecisionTreeClassifier(random_state=42)
+
+SVC(kernel='linear', random_state=42)
+
+GaussianNB()
+
+KNeighborsClassifier(n_neighbors=25)
+
+RandomForestClassifier(random_state=42)
+
+MLPClassifier(max_iter=2000, random_state=42)
+
+Training Classifier #1 DecisionTreeClassifier
+Training Classifier #2 SVC
+Training Classifier #3 GaussianNB
+Training Classifier #4 KNeighborsClassifier
+Training Classifier #5 RandomForestClassifier
+Training Classifier #6 MLPClassifier
+Accuracy Score #1: 98.9%
+Accuracy Score #2: 98.8%
+Accuracy Score #3: 96.1%
+Accuracy Score #4: 96.8%
+Accuracy Score #5: 99.5%
+Accuracy Score #6: 99.6%
+Classification Report #1 DecisionTreeClassifier
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99     13437
+           1       0.99      0.99      0.99     11594
+
+    accuracy                           0.99     25031
+   macro avg       0.99      0.99      0.99     25031
+weighted avg       0.99      0.99      0.99     25031
+
+Classification Report #2 SVC
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.99     13437
+           1       0.99      0.98      0.99     11594
+
+    accuracy                           0.99     25031
+   macro avg       0.99      0.99      0.99     25031
+weighted avg       0.99      0.99      0.99     25031
+
+Classification Report #3 GaussianNB
+              precision    recall  f1-score   support
+
+           0       0.98      0.95      0.96     13437
+           1       0.94      0.97      0.96     11594
+
+    accuracy                           0.96     25031
+   macro avg       0.96      0.96      0.96     25031
+weighted avg       0.96      0.96      0.96     25031
+
+Classification Report #4 KNeighborsClassifier
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97     13437
+           1       0.99      0.94      0.96     11594
+
+    accuracy                           0.97     25031
+   macro avg       0.97      0.97      0.97     25031
+weighted avg       0.97      0.97      0.97     25031
+
+Classification Report #5 RandomForestClassifier
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     13437
+           1       1.00      0.99      0.99     11594
+
+    accuracy                           0.99     25031
+   macro avg       1.00      0.99      0.99     25031
+weighted avg       0.99      0.99      0.99     25031
+
+Classification Report #6 MLPClassifier
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     13437
+           1       1.00      1.00      1.00     11594
+
+    accuracy                           1.00     25031
+   macro avg       1.00      1.00      1.00     25031
+weighted avg       1.00      1.00      1.00     25031
+
+
+Confusion Matrix #1 DecisionTreeClassifier
+[[13301   136]
+ [  136 11458]]
+
+Confusion Matrix #2 SVC
+[[13359    78]
+ [  212 11382]]
+
+Confusion Matrix #3 GaussianNB
+[[12762   675]
+ [  292 11302]]
+
+Confusion Matrix #4 KNeighborsClassifier
+[[13310   127]
+ [  686 10908]]
+
+Confusion Matrix #5 RandomForestClassifier
+[[13414    23]
+ [  105 11489]]
+
+Confusion Matrix #6 MLPClassifier
+[[13386    51]
+ [   41 11553]]
+Training Classifier #1 DecisionTreeClassifier
+Training Classifier #2 SVC
+Training Classifier #3 GaussianNB
+Training Classifier #4 KNeighborsClassifier
+Training Classifier #5 RandomForestClassifier
+Training Classifier #6 MLPClassifier
+Building the sample vector model...
+*************************
+Model Saved
+[1;31;1mXSS[0;0m => <script>alert('xss')</script><script><script>
+[1;32;1mNOT XSS[0;0m => hellomo
+[1;31;1mXSS[0;0m => https://store.bentley.com/en/shop/search?term=%22%3E%3Cdetails%20open%20ontoggle=prompt(1337)%3ExxLouisLouisLouis
+[1;32;1mNOT XSS[0;0m => ghfdhgdhjgd
+[1;31;1mXSS[0;0m => uid%3D19%26list_page%3D%22%3E%3Cscript%3Ealert%28document.cookie%29%3B%3C/script%3E
+[1;31;1mXSS[0;0m => &template=en_search_error&postalCode=\';alert(0)//
+[1;31;1mXSS[0;0m => &where=%3Cscript%3Ealert%28%27xss%27%29%3C%2Fscript%3E&
+[1;31;1mXSS[0;0m => &where=%3Cscript%3Ealert%28%27xss%27%29%3C%2Fscript%3E&loctypes=1003%2C1001%2C1000%2C1%2C9%2C5%2C11%2C13%2C19%2C20&from=hdr_localsearch
+[1;32;1mNOT XSS[0;0m => http://mydata.com/sad/sd/qwd/qwde/qwe/?sessionid=12
+[1;32;1mNOT XSS[0;0m => http://mydata.com?id=script
+[1;32;1mNOT XSS[0;0m => &';}},{scope:'email,user_about_me,user_hometown,user_interests,user_likes,user_status,user_website,user_birthday,p
+[1;31;1mXSS[0;0m => http://myurl.com?<script
+[1;32;1mNOT XSS[0;0m => http://mydata.com?script=script
+[1;31;1mXSS[0;0m => composite_search=1&keyword="/><script>alert("Xss:Vijayendra")</script>
+[1;31;1mXSS[0;0m => http://mysite.com?srtalert
+[1;32;1mNOT XSS[0;0m => script
+[1;32;1mNOT XSS[0;0m => alert
+[1;31;1mXSS[0;0m => Search=%22%3E'%3E%3CSCRIPT%20SRC=http://br.zone-h.org/testes/xss.js%3E%3C/SCRIPT%3E?
+[1;31;1mXSS[0;0m => id=15%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+[1;31;1mXSS[0;0m => composite_search=1&keyword="/><script>alert("Xss:Vijayendra")</script>
+[1;31;1mXSS[0;0m => id=123&href=abdc<a<script>alert(1)
+[1;32;1mNOT XSS[0;0m => <<<<<<>>>>></>,><><>
+[1;31;1mXSS[0;0m => alert()alert()
+[1;31;1mXSS[0;0m => alertalert
+[1;32;1mNOT XSS[0;0m => ?url=http://localhost:8888/notebooks/Documents/MachineLearning/Practical%20Machine%20Learning
+[1;31;1mXSS[0;0m => <script<script
+[1;31;1mXSS[0;0m => <scriptalert
+[1;32;1mNOT XSS[0;0m => httphttphttp
+[1;32;1mNOT XSS[0;0m => https://disqus.com/?ref_noscript
+[1;32;1mNOT XSS[0;0m => I am a string
+[1;31;1mXSS[0;0m => <img src="javascript:alert(1)/>"
+[1;32;1mNOT XSS[0;0m => HelloWorld!
+[1;31;1mXSS[0;0m => http://mysite.com?<script>
+[1;31;1mXSS[0;0m => <input type="text" value=`` <div/onmouseover='alert(471)'>X</div>
+[1;31;1mXSS[0;0m => <img Gsrc=x onerror="javascript:alert(324)">
+[1;31;1mXSS[0;0m => <a href="âjavascript:javascript:alert(183)" id="fuzzelement1">test</a>
+[1;31;1mXSS[0;0m => <body onscroll=javascript:alert(288)><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><input autofocus>
+[1;31;1mXSS[0;0m => <meta charset="mac-farsi">¼script¾javascript:alert(379)¼/script¾
+[1;31;1mXSS[0;0m => <HTML xmlns:xss><?import namespace=(493)s" implementation="%(htc)s"><xss:xss>XSS</xss:xss></HTML>""","XML namespace."),("""<XML ID=(494)s"><I><B>&lt;IMG SRC="javas<!-- -->cript:javascript:alert(420)"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>
+
+*------------- RESULTS -------------*
+[1;31;1mXSS[0;0m => 25
+[1;32;1mNOT XSS[0;0m => 14
